@@ -1,3 +1,11 @@
+## Mews Business Tools
+
+### [Deals Profit Calculator](calculator.html)
+
+Calculate expected gross profit, LTV, LTV/CAC ratio, and CAC payback for new signed Mews deals. This calculator takes into account regional differences, customer segments, and payment ramps to provide accurate financial projections.
+
+---
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/khatibom/website/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
