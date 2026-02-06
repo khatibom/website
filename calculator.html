@@ -1,0 +1,121 @@
+---
+layout: default
+title: Mews Deals Profit Calculator
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mews Deals Profit Calculator</title>
+    <link rel="stylesheet" href="assets/css/calculator.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Mews Deals Profit Calculator</h1>
+
+        <form id="calculator-form">
+            <div class="form-section">
+                <h2>Deal Inputs</h2>
+
+                <div class="form-group">
+                    <label for="dealSize">Average Deal Size (Hotels)</label>
+                    <input type="number" id="dealSize" name="dealSize" min="1" value="5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="monthlyPaymentsVolume">Average Monthly Payments Volume ($)</label>
+                    <input type="number" id="monthlyPaymentsVolume" name="monthlyPaymentsVolume" min="0" value="100000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="region">Region</label>
+                    <select id="region" name="region" required>
+                        <option value="">Select Region</option>
+                        <option value="north-america">North America</option>
+                        <option value="emea">EMEA</option>
+                        <option value="apac">APAC</option>
+                        <option value="latam">LATAM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="segment">Segment</label>
+                    <select id="segment" name="segment" required>
+                        <option value="">Select Segment</option>
+                        <option value="enterprise">Enterprise</option>
+                        <option value="mid-market">Mid-Market</option>
+                        <option value="smb">SMB</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lowTierRate">Low Tier Rate (%)</label>
+                    <input type="number" id="lowTierRate" name="lowTierRate" min="0" max="100" step="0.01" value="1.5" required>
+                </div>
+            </div>
+
+            <button type="submit" class="calculate-btn">Calculate</button>
+        </form>
+
+        <div id="results" class="results-section" style="display: none;">
+            <h2>Results</h2>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Year 1</h3>
+                    <div class="result-item">
+                        <span class="result-label">Gross Profit per Hotel:</span>
+                        <span class="result-value" id="year1Profit">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Total Gross Profit:</span>
+                        <span class="result-value" id="year1TotalProfit">$0</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <h3>Year 2</h3>
+                    <div class="result-item">
+                        <span class="result-label">Gross Profit per Hotel:</span>
+                        <span class="result-value" id="year2Profit">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Total Gross Profit:</span>
+                        <span class="result-value" id="year2TotalProfit">$0</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <h3>LTV Metrics</h3>
+                    <div class="result-item">
+                        <span class="result-label">Lifetime Value (LTV):</span>
+                        <span class="result-value" id="ltv">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Customer Acquisition Cost (CAC):</span>
+                        <span class="result-value" id="cac">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">LTV/CAC Ratio:</span>
+                        <span class="result-value" id="ltvCacRatio">0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">CAC Payback (months):</span>
+                        <span class="result-value" id="cacPayback">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailed-breakdown">
+                <h3>Detailed Breakdown</h3>
+                <div id="breakdown-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/calculator.js"></script>
+</body>
+</html>
