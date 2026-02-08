@@ -1,0 +1,22 @@
+# Databricks credentials - DO NOT COMMIT
+assets/js/databricks-config.js
+
+# Generated data files
+assets/data/
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
