@@ -116,6 +116,7 @@ async function fetchMQLs(year = 2025) {
     FROM ${CONFIG.database}.${CONFIG.schema}.mqls
     WHERE YEAR(date) = ${year}
       AND series IN ('actual', 'target')
+      -- 'target' = official internal target (not 'quota' or 'board plan')
     ORDER BY date, territory, segment
   `;
 
@@ -142,6 +143,7 @@ async function fetchPipeline(year = 2025) {
     FROM ${CONFIG.database}.${CONFIG.schema}.pipeline_created
     WHERE YEAR(date) = ${year}
       AND series IN ('actual', 'target')
+      -- 'target' = official internal target (not 'quota' or 'board plan')
     ORDER BY date, territory, segment
   `;
 
@@ -175,6 +177,7 @@ async function fetchSignedDeals(year = 2025) {
     FROM ${CONFIG.database}.${CONFIG.schema}.signed_deals
     WHERE year = ${year}
       AND series IN ('actual', 'target')
+      -- 'target' = official internal target (not 'quota' or 'board plan')
     ORDER BY date, territory, segment
   `;
 
