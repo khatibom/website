@@ -1,6 +1,9 @@
 # Databricks credentials - DO NOT COMMIT
 assets/js/databricks-config.js
 
+# Generated data files
+assets/data/
+
 # Node modules
 node_modules/
 
