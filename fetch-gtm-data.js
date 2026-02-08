@@ -260,16 +260,19 @@ function transformData(mqls, pipeline, signedDeals) {
  * Main execution
  */
 async function main() {
+  // Allow year to be passed as command line argument
+  const year = process.argv[2] ? parseInt(process.argv[2]) : 2026;
+
   console.log('=' .repeat(80));
-  console.log('📊 Fetching GTM Data from Databricks');
+  console.log(`📊 Fetching GTM Data from Databricks (Year: ${year})`);
   console.log('=' .repeat(80));
 
   try {
     // Fetch all data
     const [mqls, pipeline, signedDeals] = await Promise.all([
-      fetchMQLs(2025),
-      fetchPipeline(2025),
-      fetchSignedDeals(2025)
+      fetchMQLs(year),
+      fetchPipeline(year),
+      fetchSignedDeals(year)
     ]);
 
     console.log('\n📈 Data Summary:');

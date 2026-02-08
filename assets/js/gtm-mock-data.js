@@ -5,9 +5,9 @@
  */
 
 // Current fiscal year and month
-const CURRENT_YEAR = 2025;
-const CURRENT_MONTH = 12; // December (last month of data available)
-const CURRENT_QUARTER = 4;
+const CURRENT_YEAR = 2026;
+const CURRENT_MONTH = 1; // January (first month of 2026)
+const CURRENT_QUARTER = 1;
 
 /**
  * Generate mock data for Total GTM - Marketing & Pipeline
