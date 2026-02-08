@@ -1,5 +1,11 @@
 ## Mews Business Tools
 
+### [GTM Dashboard - Monthly Business Report](gtm-dashboard.html)
+
+Automated monthly business reporting dashboard tracking Mews's Key Business Metrics (KBMs) across all go-to-market functions. View pipeline generation, sales performance, payments, and customer success metrics with territory-level breakdowns and multiple time period views (monthly, quarterly, YTD).
+
+**Features**: Executive summaries, marketing & pipeline tracking, commercial metrics, payments & CS analytics, segment and territory drill-downs.
+
 ### [Deals Profit Calculator](calculator.html)
 
 Calculate expected gross profit, LTV, LTV/CAC ratio, and CAC payback for new signed Mews deals. This calculator takes into account regional differences, customer segments, and payment ramps to provide accurate financial projections.
